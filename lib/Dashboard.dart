@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/aboutlisttile.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -72,11 +73,15 @@ class _DashState extends State<Dash> {
                         },
                         child: Text('About Dialog')),
                     ElevatedButton(
-                        onPressed: () {}, child: Text('About Listtile')),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutTile()),
+                          );
+                        },
+                        child: Text('About List tile')),
                   ],
-                ),
-                Row(
-                  children: [],
                 ),
               ],
             ),
