@@ -5,7 +5,9 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dash();
+    return MaterialApp(
+      home: Dash(),
+    );
   }
 }
 
@@ -25,12 +27,14 @@ class _DashState extends State<Dash> {
           // preferredSize: Size.fromHeight(kToolbarHeight + 20),
           backgroundColor: Colors.blue,
           leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios_new_outlined,
-              color: Colors.white,
-            ),
+            icon: Builder(builder: (context) {
+              return Icon(
+                Icons.widgets,
+                color: Colors.white,
+              );
+            }),
             onPressed: () {
-              Navigator.pop(context);
+              //Navigator.pop(context);
             },
           ),
 
@@ -41,6 +45,42 @@ class _DashState extends State<Dash> {
           iconTheme: IconThemeData(color: Colors.white),
 
           //centerTitle: true,
+        ),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20.0,
+                ),
+
+                ///first row
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AboutDialog(
+                              applicationIcon: FlutterLogo(),
+                              applicationLegalese: 'legalese',
+                              applicationName: 'Flutter Widgets',
+                              applicationVersion: '1.0',
+                              children: [Text('Fltter widgets')],
+                            ),
+                          );
+                        },
+                        child: Text('About Dialog')),
+                    ElevatedButton(
+                        onPressed: () {}, child: Text('About Listtile')),
+                  ],
+                ),
+                Row(
+                  children: [],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
