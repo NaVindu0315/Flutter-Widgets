@@ -83,6 +83,19 @@ class _DashState extends State<Dash> {
                         child: Text('About List tile')),
                   ],
                 ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutTile()),
+                          );
+                        },
+                        child: Text('Animated Align')),
+                  ],
+                ),
               ],
             ),
           ),
