@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/aboutlisttile.dart';
+import 'package:flutter_widgets/widgets/circular.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -94,6 +95,14 @@ class _DashState extends State<Dash> {
                           );
                         },
                         child: Text('Animated Align')),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Circlur()),
+                          );
+                        },
+                        child: Text('Circular Indicator')),
                   ],
                 ),
               ],
