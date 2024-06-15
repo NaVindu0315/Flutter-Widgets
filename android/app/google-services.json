@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "999631901575",
+    "project_id": "flutter-widgets-aa290",
+    "storage_bucket": "flutter-widgets-aa290.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999631901575:android:d9a8f9c1c45aeb3c293922",
+        "android_client_info": {
+          "package_name": "com.example.flutter_widgets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALyJ6zbvg4KbGJAtHIM4CnTIVFMjH20co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
