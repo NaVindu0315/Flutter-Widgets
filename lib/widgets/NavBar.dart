@@ -44,6 +44,12 @@ class _NavBarwdgtState extends State<NavBarwdgt> {
           NavigationDestination(icon: (Icon(Icons.search)), label: 'Search'),
           NavigationDestination(icon: (Icon(Icons.person)), label: 'Person'),
         ],
+        selectedIndex: currentIndex,
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }
