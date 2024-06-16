@@ -105,6 +105,18 @@ class _DashState extends State<Dash> {
                         child: Text('Circular Indicator')),
                   ],
                 ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Circlur()),
+                          );
+                        },
+                        child: Text('Navigation Bar')),
+                  ],
+                ),
               ],
             ),
           ),
