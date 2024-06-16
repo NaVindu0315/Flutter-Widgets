@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/NavBar.dart';
 import 'package:flutter_widgets/widgets/aboutlisttile.dart';
 import 'package:flutter_widgets/widgets/circular.dart';
 
@@ -111,7 +112,7 @@ class _DashState extends State<Dash> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Circlur()),
+                            MaterialPageRoute(builder: (context) => NaVBarr()),
                           );
                         },
                         child: Text('Navigation Bar')),

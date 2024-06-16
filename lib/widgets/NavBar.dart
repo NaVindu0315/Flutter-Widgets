@@ -34,6 +34,17 @@ class _NavBarwdgtState extends State<NavBarwdgt> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: body.elementAt(currentIndex),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(icon: (Icon(Icons.home)), label: 'home'),
+          NavigationDestination(icon: (Icon(Icons.search)), label: 'Search'),
+          NavigationDestination(icon: (Icon(Icons.person)), label: 'Person'),
+        ],
+      ),
+    );
   }
 }
