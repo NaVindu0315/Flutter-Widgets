@@ -118,6 +118,18 @@ class _DashState extends State<Dash> {
                         child: Text('Navigation Bar')),
                   ],
                 ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => NaVBarr()),
+                          );
+                        },
+                        child: Text('Real Time')),
+                  ],
+                ),
               ],
             ),
           ),
