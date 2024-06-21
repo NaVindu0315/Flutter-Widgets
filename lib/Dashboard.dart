@@ -3,6 +3,8 @@ import 'package:flutter_widgets/widgets/NavBar.dart';
 import 'package:flutter_widgets/widgets/aboutlisttile.dart';
 import 'package:flutter_widgets/widgets/circular.dart';
 
+import 'firebase/realtime.dart';
+
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
 
@@ -124,7 +126,7 @@ class _DashState extends State<Dash> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => NaVBarr()),
+                            MaterialPageRoute(builder: (context) => Realtime()),
                           );
                         },
                         child: Text('Real Time')),

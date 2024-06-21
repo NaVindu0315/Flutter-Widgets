@@ -5,7 +5,9 @@ class Realtime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: RealData(),
+    );
   }
 }
 
@@ -25,13 +27,17 @@ class _RealDataState extends State<RealData> {
           Spacer(),
           Row(
             children: [
-              TextField(
-                //  controller: _controller,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Enter your text',
+              Spacer(),
+              Center(
+                child: TextField(
+                  //  controller: _controller,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Enter your text',
+                  ),
                 ),
               ),
+              Spacer(),
             ],
           ),
           Spacer(),
