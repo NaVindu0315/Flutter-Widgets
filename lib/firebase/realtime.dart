@@ -19,30 +19,58 @@ class RealData extends StatefulWidget {
 }
 
 class _RealDataState extends State<RealData> {
+  TextEditingController namecontroller = new TextEditingController();
+  TextEditingController studentcontroller = new TextEditingController();
+
+  int stnum = 0;
+  String name = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Spacer(),
-          Row(
-            children: [
-              Spacer(),
-              Center(
-                child: TextField(
-                  //  controller: _controller,
+        body: SafeArea(
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        Row(
+          children: [
+            Text(
+              'Current Similarity Level - $name',
+              style: TextStyle(fontSize: 25.0, color: Colors.black),
+            ),
+            Spacer(),
+          ],
+        ),
+        SizedBox(
+          height: 20.0,
+        ),
+        Row(
+          children: [
+            SizedBox(
+              height: 70,
+              width: 300, // Set the width of the SizedBox to 300 pixels
+              child: Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  controller: namecontroller,
+                  onChanged: (value) {
+                    //email = value;
+                    name = value;
+                  },
                   decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.summarize_outlined,
+                    ),
+                    labelText: 'New Similarity level',
                     border: OutlineInputBorder(),
-                    labelText: 'Enter your text',
                   ),
                 ),
               ),
-              Spacer(),
-            ],
-          ),
-          Spacer(),
-        ],
-      ),
-    );
+            ),
+          ],
+        ),
+      ]),
+    ));
   }
 }
