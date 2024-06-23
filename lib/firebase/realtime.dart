@@ -30,26 +30,49 @@ class _RealDataState extends State<RealData> {
     return Scaffold(
         body: SafeArea(
       child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Row(
-          children: [
-            Text(
-              'Name - $name',
-              style: TextStyle(fontSize: 25.0, color: Colors.black),
-            ),
-            Spacer(),
-          ],
+        SizedBox(
+          height: 40.0,
         ),
         Row(
           children: [
             Text(
-              'Student Number - $stnum',
-              style: TextStyle(fontSize: 25.0, color: Colors.black),
+              'Name - ',
+              style: TextStyle(
+                fontSize: 25.0,
+                color: Colors.black,
+              ),
+            ),
+            Text(
+              '$name',
+              style: TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
             ),
             Spacer(),
           ],
         ),
         SizedBox(
-          height: 20.0,
+          height: 15.0,
+        ),
+        Row(
+          children: [
+            Text(
+              'Student Number - ',
+              style: TextStyle(fontSize: 25.0, color: Colors.black),
+            ),
+            Text(
+              '$stnum',
+              style: TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            Spacer(),
+          ],
+        ),
+        SizedBox(
+          height: 30.0,
         ),
         Row(
           children: [
