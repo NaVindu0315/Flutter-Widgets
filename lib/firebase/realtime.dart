@@ -33,7 +33,16 @@ class _RealDataState extends State<RealData> {
         Row(
           children: [
             Text(
-              'Current Similarity Level - $name',
+              'Name - $name',
+              style: TextStyle(fontSize: 25.0, color: Colors.black),
+            ),
+            Spacer(),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              'Student Number - $stnum',
               style: TextStyle(fontSize: 25.0, color: Colors.black),
             ),
             Spacer(),
@@ -62,7 +71,40 @@ class _RealDataState extends State<RealData> {
                     prefixIcon: Icon(
                       Icons.summarize_outlined,
                     ),
-                    labelText: 'New Similarity level',
+                    labelText: 'Name',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 20.0,
+        ),
+
+        ///student numer
+        Row(
+          children: [
+            SizedBox(
+              height: 70,
+              width: 300, // Set the width of the SizedBox to 300 pixels
+              child: Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  controller: studentcontroller,
+                  onChanged: (value) {
+                    //email = value;
+                    stnum = int.parse(value);
+                  },
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.summarize_outlined,
+                    ),
+                    labelText: 'Student Number ',
                     border: OutlineInputBorder(),
                   ),
                 ),
