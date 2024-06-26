@@ -33,6 +33,15 @@ class _RealDataState extends State<RealData> {
   late DatabaseReference _nameref;
   late DatabaseReference _stnumref;
 
+  ///functions to set refrence
+  ///
+  ///
+  ///init state
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
