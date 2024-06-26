@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class Realtime extends StatelessWidget {
@@ -24,6 +25,13 @@ class _RealDataState extends State<RealData> {
 
   int stnum = 0;
   String name = "";
+
+  int setnum = 0;
+  String setname = "";
+
+  ///database references
+  late DatabaseReference _nameref;
+  late DatabaseReference _stnumref;
 
   @override
   Widget build(BuildContext context) {
