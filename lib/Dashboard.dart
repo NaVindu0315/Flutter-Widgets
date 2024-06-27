@@ -132,6 +132,18 @@ class _DashState extends State<Dash> {
                         child: Text('Real Time')),
                   ],
                 ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Realtime()),
+                          );
+                        },
+                        child: Text('Provider')),
+                  ],
+                ),
               ],
             ),
           ),
