@@ -12,7 +12,14 @@ class Home extends StatelessWidget {
       ),
       body: Container(
         child: Column(
-          children: [Text(('0'))],
+          children: [
+            Row(
+              children: [Text('Data')],
+            ),
+            Row(
+              children: [ElevatedButton(onPressed: () {}, child: Text('addd'))],
+            ),
+          ],
         ),
       ),
     );
