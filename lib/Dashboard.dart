@@ -25,6 +25,10 @@ class Dash extends StatefulWidget {
 }
 
 class _DashState extends State<Dash> {
+  int currentStep = 0;
+  bool get isFirstStep => currentStep == 0;
+  bool get isLastStep => currentStep == steps().length - 1;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
