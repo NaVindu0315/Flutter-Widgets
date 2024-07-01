@@ -31,7 +31,7 @@ class _Stepper_WidState extends State<Stepper_Wid> {
           backgroundColor: Color(0xff237ACC),
         ),
         body: Stepper(
-          steps: [],
+          steps: steps(),
         ),
       ),
     );

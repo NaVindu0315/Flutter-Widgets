@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/NavBar.dart';
+import 'package:flutter_widgets/widgets/Stepper_page.dart';
 import 'package:flutter_widgets/widgets/aboutlisttile.dart';
 import 'package:flutter_widgets/widgets/circular.dart';
 
@@ -150,7 +151,8 @@ class _DashState extends State<Dash> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Realtime()),
+                            MaterialPageRoute(
+                                builder: (context) => Stepper_Wid()),
                           );
                         },
                         child: Text('Stepper')),
