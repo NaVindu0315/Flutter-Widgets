@@ -30,7 +30,25 @@ class _Stepper_WidState extends State<Stepper_Wid> {
           ),
           backgroundColor: Color(0xff237ACC),
         ),
+        body: Stepper(
+          steps: [],
+        ),
       ),
     );
   }
 }
+
+List<Step> steps() => [
+      const Step(
+        title: Text('Personal'),
+        content: Column(),
+      ),
+      const Step(
+        title: Text('Work'),
+        content: Column(),
+      ),
+      const Step(
+        title: Text('Complete'),
+        content: Column(),
+      )
+    ];
